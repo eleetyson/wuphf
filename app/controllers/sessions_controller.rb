@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
 
   end
 
+# POST /login
   def create
 
   end
