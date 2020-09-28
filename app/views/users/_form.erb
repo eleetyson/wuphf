@@ -1,10 +1,9 @@
-
-<%= form_for(@user) do |f| %>
+<%= form_for @user, html: { autocomplete: "off" } do |f| %>
   <%= f.label "", "Full Name" %><br>
-  <%= f.text_field :name, autocomplete: 'off' %><br><br>
+  <%= f.text_field :name %><br><br>
 
   <%= f.label "", "Email Address" %><br>
-  <%= f.email_field :email, autocomplete: 'off' %><br><br>
+  <%= f.email_field :email %><br><br>
 
   <%= f.label "Password"%><br>
   <%= f.password_field :password %><br><br>
@@ -12,9 +11,5 @@
   <%= f.label "", "Password Confirmation"%><br>
   <%= f.password_field :password_confirmation %><br><br>
 
-  <%= f.submit "Sign Up" %><br>
+  <%= f.submit "Create Account" %><br>
 <% end %>
-
-<p>or</p>
-
-<%= button_to 'Log in with Google', '/auth/google_oauth2', {class: 'google'} %>

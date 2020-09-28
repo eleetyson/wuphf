@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'users#new'
-  get '/auth/facebook/callback' => 'sessions#create'
+  root 'users#home'
+  get '/auth/google_oauth2/callback' => 'sessions#omniauth'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   post '/logout' => 'sessions#destroy'

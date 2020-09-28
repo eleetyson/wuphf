@@ -5,16 +5,16 @@
 
   <section class="login">
     <div class="login-form">
-      <%= render 'form' %>
+      <%= button_to 'Sign in with Google', '/auth/google_oauth2' %><br>
+      <%= button_to 'Log In', login_path, method: :get %>
+      <p>or</p>
+      <%= button_to 'Sign Up', new_user_path, method: :get %>
     </div>
   </section>
 
   <section class="filler">
     <div>
-      <h4>I wish there was a way that I could do everything all at once,
-        and I could just be like this little dog going, ‘Ruff! Ruff! Ruff! Ruff! Ruff!'
-      </h4>
-      <p>- Kelly Kapoor</p>
+      <%= inline_svg_tag "dog.svg" %>
     </div>
   </section>
 

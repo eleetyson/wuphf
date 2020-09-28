@@ -42,8 +42,8 @@
    grid-template-columns: 1fr 1fr 4fr 6fr 1fr 1fr;
    grid-template-areas:
     "nav nav nav nav nav nav"
-    ". . login dog . ."
-    ". . login dog . ."
+    ". . login filler . ."
+    ". . login filler . ."
     "footer footer footer footer footer footer";
  }
 
@@ -51,14 +51,26 @@
    grid-area: nav;
    display: flex;
    font-size: 2.8rem;
-   color: #564e96;
    padding: 2rem 4rem;
-   /* border-bottom: .1rem solid #dcdcdc; */
+   color: #564e96;
+   text-decoration: none;
+ }
+
+ .grid-signin nav a {
+   text-decoration: none;
+   color: #564e96;
+ }
+
+ .grid-signin nav a:hover {
+   text-decoration: none;
+   color: #a5a4cb;
+   font-weight: 900;
+
  }
 
  .grid-signin .login {
    grid-area: login;
-   padding: 2rem 1rem 1rem;
+   padding: 3rem 1rem 1rem;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -102,17 +114,26 @@
    transform: scale(1.1);
  }
 
- /* .grid-signin .login-form input[type=submit].google {
-   background-color: #a5a4cb;
- } */
-
  .grid-signin .login-form p {
    text-align: center;
  }
 
- .grid-signin .dog {
-   grid-area: dog;
-   padding: 2rem 0 0 2rem;
+ .grid-signin .filler {
+   grid-area: filler;
+   align-items: center;
+   line-height: 3rem;
+   padding: 3rem 2rem;
+   font-size: 2rem;
+   color: #564e96;
+ }
+
+ .grid-sign .filler h4 {
+   font-size: 2rem;
+ }
+
+ .grid-signin .filler p {
+   font-size: 1.5rem;
+   font-style: italic;
  }
 
  /* sign in page styling END */
