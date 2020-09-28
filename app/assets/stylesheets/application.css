@@ -51,7 +51,7 @@
    grid-area: nav;
    display: flex;
    font-size: 2.8rem;
-   color: #f37022;
+   color: #564e96;
    padding: 2rem 4rem;
    /* border-bottom: .1rem solid #dcdcdc; */
  }
@@ -59,11 +59,62 @@
  .grid-signin .login {
    grid-area: login;
    padding: 2rem 1rem 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+ }
+
+ .grid-signin .login-form {
+   padding: 3rem;
+   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+ }
+
+ .grid-signin .login-form input[type=text],
+ input[type=password],
+ input[type=email] {
+   background-color: #f0f0f0;
+   border: none;
+   padding: .2rem;
+   margin: .2rem 0;
+   width: 20rem;
+   height: 3rem;
+   font-size: 1.2rem;
+   text-indent: 1rem;
+ }
+
+ .grid-signin .login-form label {
+   font-size: 1.4rem;
+ }
+
+ .grid-signin .login-form input[type=submit] {
+   width: 20rem;
+   height: 3rem;
+   font-size: 1.6rem;
+   cursor: pointer;
+   border: none;
+   background-color: #ef9565;
+   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+   transition: all .3s ease-in-out;
+ }
+
+ .grid-signin .login-form input[type=submit]:hover {
+   transform: scale(1.1);
+ }
+
+ /* .grid-signin .login-form input[type=submit].google {
+   background-color: #a5a4cb;
+ } */
+
+ .grid-signin .login-form p {
+   text-align: center;
+   padding: 0.5rem;
+   margin: 0.5rem;
  }
 
  .grid-signin .dog {
    grid-area: dog;
-   padding: 1rem 0 0 2rem;
+   padding: 2rem 0 0 2rem;
  }
 
  /* sign in page styling END */
