@@ -58,11 +58,12 @@
 
  .grid-signin .login {
    grid-area: login;
-   padding: 1rem 0 0;
+   padding: 2rem 1rem 1rem;
  }
 
  .grid-signin .dog {
    grid-area: dog;
+   padding: 1rem 0 0 2rem;
  }
 
  /* sign in page styling END */
