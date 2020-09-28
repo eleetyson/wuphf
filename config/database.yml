@@ -80,6 +80,5 @@ test:
 #
 production:
   <<: *default
-  database: wuphf_production
-  username: wuphf
-  password: <%= ENV['WUPHF_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  username: wuphf #use 'admin' if doesn't work
