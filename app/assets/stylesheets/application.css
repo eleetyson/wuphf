@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+ *,
+ ::before,
+ ::after {
+   box-sizing: border-box;
+ }
+
+ body {
+   font-family: 'Arimo', sans-serif;
+   letter-spacing: 0.5px;
+ }
+
+ .grid-signin {
+   display: grid;
+   grid-template-columns: ;
+   grid-template-areas:
+    "...."
+    "...";
+ }
+
+ /* bright orange: color: #F37022 */
+ /* dull orange: color: #EF9565 */
+ /* bright purple: color: #564E96 */
+ /* dull purple: color: #A5A4CB */
