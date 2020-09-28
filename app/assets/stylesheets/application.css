@@ -19,20 +19,61 @@
    box-sizing: border-box;
  }
 
- body {
-   font-family: 'Arimo', sans-serif;
-   letter-spacing: 0.5px;
+/* 1rem == 10px */
+/* .1rem == 1px */
+ html {
+   font-size: 62.5%;
  }
 
+ body {
+   font-family: 'Quicksand', sans-serif;
+   font-size: 1.6rem;
+   font-weight: 900;
+   height: 100%;
+   min-height: 100%;
+   width: 100%;
+ }
+
+ /* sign in page styling BEGIN */
+ /* 6 column layout */
  .grid-signin {
    display: grid;
-   grid-template-columns: ;
+   min-height: 100%;
+   grid-template-columns: 1fr 1fr 4fr 6fr 1fr 1fr;
    grid-template-areas:
-    "...."
-    "...";
+    "nav nav nav nav nav nav"
+    ". . login dog . ."
+    ". . login dog . ."
+    "footer footer footer footer footer footer";
  }
 
- /* bright orange: color: #F37022 */
+ .grid-signin nav {
+   grid-area: nav;
+   display: flex;
+   font-size: 2.8rem;
+   color: #f37022;
+   padding: 2rem 4rem;
+   /* border-bottom: .1rem solid #dcdcdc; */
+ }
+
+ .grid-signin .login {
+   grid-area: login;
+   padding: 1rem 0 0;
+ }
+
+ .grid-signin .dog {
+   grid-area: dog;
+ }
+
+ /* sign in page styling END */
+
+ /* home page styling BEGIN */
+ /* home page styling END */
+
+ /* bright orange: color: #f37022 */
  /* dull orange: color: #EF9565 */
  /* bright purple: color: #564E96 */
  /* dull purple: color: #A5A4CB */
+
+ /* font-family: 'Nunito', sans-serif;
+ header - font-family: 'Quicksand', sans-serif; */
