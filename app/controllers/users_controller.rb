@@ -34,7 +34,13 @@ class UsersController < ApplicationController
 # renders the dashboard (views/users/show)
   def show
     @user = User.find_by(id: params[:id])
-    render layout: "dashboard"
+
+    if @user.id == current_user.id
+      @message = @user.messages.build
+      render layout: "dashboard"
+    else
+      redirect_to user_path(@user)
+    end
   end
 
   private

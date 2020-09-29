@@ -1,0 +1,17 @@
+<% if current_user.friends.present? %>
+  <%= form_for @message do |f| %>
+    <%= f.label "Recipient" %><br>
+    <%= f.collection_select :friend_id, current_user.friends, :id, :name, include_blank: true, required: true  %><br><br>
+
+    <%= f.label "Message" %><br>
+    <%= f.text_area :content, required: true %><br><br>
+
+    <%= f.submit "Send WUPHF!" %>
+  <% end %>
+<% else %>
+  <%= form_for @message do |f| %>
+    <%= f.label "Message" %>
+    <%= f.text_area :content %>
+    <%= f.submit %>
+  <% end %>
+<% end %>

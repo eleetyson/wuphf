@@ -81,7 +81,8 @@
    align-items: flex-start;
  }
 
- .grid-signin .login-form {
+ .grid-signin .login-form,
+ .dashboard .msg-form {
    padding: 3rem;
    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
  }
@@ -111,10 +112,11 @@
    border: none;
    background-color: #ef9565;
    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-   transition: all .3s ease-in-out;
+   transition: all .2s ease-in-out;
  }
 
- .grid-signin .login-form input[type=submit]:hover {
+ .grid-signin .login-form input[type=submit]:hover,
+ .dashboard .msg-form input[type=submit]:hover {
    transform: scale(1.1);
  }
 
@@ -152,8 +154,8 @@
    grid-template-columns: 1fr 1fr 6fr 4fr 1fr 1fr;
    grid-template-areas:
     "n n n n l ."
-    ". . compose recipients . ."
-    ". . compose recipients . ."
+    ". . recipients compose . ."
+    ". . recipients compose . ."
     "f f f f f f";
  }
 
@@ -179,16 +181,49 @@
    padding: 3rem 1rem 1rem;
    display: flex;
    flex-direction: column;
-   background-color: #ef9565;
  }
 
- .dashboard .msg-form {
-   padding: 3rem;
+ .dashboard .msg-form label {
+   color: #ef9565;
  }
 
- .dashboard .friend-container {
+ .dashboard .msg-form select,
+ .dashboard .msg-form textarea,
+ .dashboard .msg-form input[type=submit] {
+   width: 25rem;
+   padding: .5rem;
+   margin-top: .5rem;
+   font-size: 1.4rem;
+ }
+
+ .dashboard .msg-form select {
+   height: 3rem;
+ }
+
+ .dashboard .msg-form textarea {
+   height: 15rem;
+   resize: none;
+ }
+
+ .dashboard .msg-form input[type=submit] {
+   cursor: pointer;
+   transition: all .2s ease-in-out;
+   height: 4rem;
+   border: none;
+   border-radius: 1rem;
+   background-color: #a5a4cb;
+   color: #fff;
+ }
+
+ .dashboard .msg-form input[type=submit]:focus {
+   outline: none;
+   box-shadow: none;
+   color: #000;
+ }
+
+ /* .dashboard .friend-container {
    grid-area: recipients;
- }
+ } */
 
 
 
@@ -197,7 +232,7 @@
 
  /* bright orange: color: #f37022 */
  /* dull orange: color: #ef9565 */
- /* bright purple: color: #564E96 */
+ /* bright purple: color: #564e96 */
  /* dull purple: color: #a5a4cb */
 
  /* font-family: 'Nunito', sans-serif;

@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show] do
     resources :friends, only: [:index, :new, :create]
   end
-  
+
+  resources :messages, only: [:create]
 end
