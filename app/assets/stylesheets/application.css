@@ -34,7 +34,7 @@
    width: 100%;
  }
 
- /* sign in page styling BEGIN */
+ /* sign in / sign up pages styling BEGIN */
  /* 6 column layout */
  .grid-signin {
    display: grid;
@@ -116,6 +116,8 @@
 
  .grid-signin .login-form p {
    text-align: center;
+   font-size: .9rem;
+   word-wrap: break-word;
  }
 
  .grid-signin .filler {
@@ -136,10 +138,38 @@
    font-style: italic;
  }
 
- /* sign in page styling END */
+ /* sign in / sign up pages styling END */
 
- /* home page styling BEGIN */
- /* home page styling END */
+ /* dashboard pages styling BEGIN */
+ /* 6 column layout */
+ .dashboard {
+   display: grid;
+   min-height: 100%;
+   grid-template-columns: 1fr 1fr 6fr 4fr 1fr 1fr;
+   grid-template-areas:
+    "n n n n n n"
+    ". . compose recipients . ."
+    ". . compose recipients . ."
+    "f f f f f f";
+ }
+
+ .dashboard nav {
+   grid-area: n;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   font-size: 2.8rem;
+   padding: 2rem 4rem;
+   color: #564e96;
+   text-decoration: none;
+ }
+
+ .grid-dashboard nav div.logout {
+   font-size: 2rem;
+   align-self: flex-end;
+ }
+
+ /* dashboard pages styling END */
 
  /* bright orange: color: #f37022 */
  /* dull orange: color: #EF9565 */

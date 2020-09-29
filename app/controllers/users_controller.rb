@@ -11,17 +11,27 @@ class UsersController < ApplicationController
 
 # POST /users
 # create an account for the user and log them in if given valid info
-# redirect to sign up page with error message if not
+# redirect to sign up page with flash message if not
   def create
-    @user = User.create(user_params)
+    @user = User.new(user_params)
 
     if @user.save
       session[:user_id] = @user.id
-      # redirect_to dashboard
+      redirect_to user_path(@user)
+    elsif @user.errors.full_messages.present?
+      flash[:message] = @user.errors.full_messages.first
+      redirect_to new_user_path
     else
       flash[:message] = "invalid information"
       redirect_to new_user_path
     end
+  end
+
+# GET /users/:id
+# renders the dashboard (views/users/show)
+  def show
+    render layout: "dashboard"
+    binding.pry
   end
 
   private

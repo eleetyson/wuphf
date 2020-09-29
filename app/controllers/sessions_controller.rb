@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
 # POST /login
 # log the user in if given valid credentials
-# redirect to the login page with error message if not
+# redirect to the login page with flash message if not
   def create
     user = User.find_by(email: params[:email])
     user = user.try(:authenticate, params[:password])
@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       @user = user
-      # redirect_to dashboard
+      redirect_to user_path(@user)
     else
       flash[:message] = "invalid login credentials"
       redirect_to login_path
@@ -32,7 +32,7 @@ class SessionsController < ApplicationController
     end
 
     session[:user_id] = @user.id
-    # redirect_to dashboard
+    redirect_to user_path(@user)
   end
 
 # POST /logout
