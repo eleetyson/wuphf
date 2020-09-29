@@ -1,15 +1,17 @@
 <%= form_for @user, html: { autocomplete: "off" } do |f| %>
   <%= f.label "", "Full Name" %><br>
-  <%= f.text_field :name %><br><br>
+  <%= f.text_field :name, required: true %><br><br>
 
   <%= f.label "", "Email Address" %><br>
-  <%= f.email_field :email %><br><br>
+  <%= f.email_field :email, required: true %><br><br>
 
   <%= f.label "Password"%><br>
-  <%= f.password_field :password %><br><br>
+  <%= f.password_field :password, required: true %><br><br>
 
   <%= f.label "", "Password Confirmation"%><br>
-  <%= f.password_field :password_confirmation %><br><br>
+  <%= f.password_field :password_confirmation, required: true %><br><br>
 
   <%= f.submit "Create Account" %><br>
 <% end %>
+
+<p><%= flash[:message] %></p>

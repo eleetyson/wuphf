@@ -4,8 +4,20 @@ class SessionsController < ApplicationController
   end
 
 # POST /login
+# log the user in if given valid credentials
+# redirect to the login page with error message if not
   def create
+    user = User.find_by(email: params[:email])
+    user = user.try(:authenticate, params[:password])
 
+    if user
+      session[:user_id] = user.id
+      @user = user
+      # redirect_to dashboard
+    else
+      flash[:message] = "invalid login credentials"
+      redirect_to login_path
+    end
   end
 
 # GET /auth/google_oauth2/callback
@@ -20,7 +32,7 @@ class SessionsController < ApplicationController
     end
 
     session[:user_id] = @user.id
-    # render 'welcome/home'
+    # redirect_to dashboard
   end
 
 # POST /logout
