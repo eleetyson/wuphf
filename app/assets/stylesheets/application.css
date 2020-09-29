@@ -181,6 +181,11 @@
    padding: 3rem 1rem 1rem;
    display: flex;
    flex-direction: column;
+   align-items: center;
+ }
+
+ .dashboard .msg-form {
+   border-radius: 0.5rem;
  }
 
  .dashboard .msg-form label {
@@ -194,6 +199,7 @@
    padding: .5rem;
    margin-top: .5rem;
    font-size: 1.4rem;
+   border-color: #D3D3D3;
  }
 
  .dashboard .msg-form select {
