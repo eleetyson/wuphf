@@ -2,7 +2,6 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   private
-
 # finds the current user based on the value for the user_id key in the session hash
 # returns nil if user is not "logged in"
   def current_user
@@ -16,12 +15,11 @@ class ApplicationController < ActionController::Base
 
 # redirect to root if user isn't "logged in"
   def require_login
-    redirect_to '/' unless logged_in?
+    redirect_to root_path unless logged_in?
   end
 
-# redirect to ___ if user is "logged in"
+# redirect to dashboard if user is "logged in"
   def require_logout
-    # route tbd
-    # redirect_to '/home' if logged_in?
+    redirect_to user_path(current_user) if logged_in?
   end
 end

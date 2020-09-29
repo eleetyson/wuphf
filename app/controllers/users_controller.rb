@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :require_login, only: [:show]
+  before_action :require_logout, only: [:home, :new, :create]
+
 # root
   def home
   end

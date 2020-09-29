@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :require_logout
+
 # GET /login
   def new
   end
