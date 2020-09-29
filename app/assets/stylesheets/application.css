@@ -174,17 +174,31 @@
    font-size: 1.5rem;
  }
 
- .dashboard . {
-
+ .dashboard .msg-container {
+   grid-area: compose;
+   padding: 3rem 1rem 1rem;
+   display: flex;
+   flex-direction: column;
+   background-color: #ef9565;
  }
+
+ .dashboard .msg-form {
+   padding: 3rem;
+ }
+
+ .dashboard .friend-container {
+   grid-area: recipients;
+ }
+
+
 
 
  /* dashboard pages styling END */
 
  /* bright orange: color: #f37022 */
- /* dull orange: color: #EF9565 */
+ /* dull orange: color: #ef9565 */
  /* bright purple: color: #564E96 */
- /* dull purple: color: #A5A4CB */
+ /* dull purple: color: #a5a4cb */
 
  /* font-family: 'Nunito', sans-serif;
  header - font-family: 'Quicksand', sans-serif; */

@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_action :require_logout
+  before_action :require_logout, except: [:destroy]
 
 # GET /login
   def new
