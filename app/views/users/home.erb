@@ -5,10 +5,10 @@
 
   <section class="login">
     <div class="login-form">
-      <%= button_to 'Sign in with Google', '/auth/google_oauth2' %><br>
-      <%= button_to 'Sign in', login_path, method: :get %>
-      <p>or</p>
       <%= button_to 'Sign up', new_user_path, method: :get %>
+      <%= button_to 'Log in', login_path, method: :get %>
+      <p>-</p>
+      <%= button_to 'Sign on with Google', '/auth/google_oauth2' %><br>
     </div>
   </section>
 

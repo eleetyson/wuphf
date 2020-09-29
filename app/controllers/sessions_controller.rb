@@ -8,4 +8,15 @@ class SessionsController < ApplicationController
   def create
 
   end
+
+# GET /auth/google_oauth2/callback
+# separate login in for google oauth
+  def omniauth
+
+  end
+
+# POST /logout
+  def destroy
+
+  end
 end
