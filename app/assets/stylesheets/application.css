@@ -32,6 +32,7 @@
    height: 100%;
    min-height: 100%;
    width: 100%;
+   background-color: #f9f9f9;
  }
 
  /* sign in / sign up pages styling BEGIN */
@@ -92,6 +93,7 @@
  input[type=email] {
    background-color: #f0f0f0;
    border: none;
+   border-radius: 1rem;
    padding: .2rem;
    margin: .2rem 0;
    width: 20rem;
@@ -194,6 +196,9 @@
 
  .dashboard .msg-form select,
  .dashboard .msg-form textarea,
+ .dashboard .msg-form input[type=tel],
+ .dashboard .msg-form input[type=text],
+ .dashboard .msg-form input[type=email],
  .dashboard .msg-form input[type=submit] {
    width: 25rem;
    padding: .5rem;
@@ -201,15 +206,20 @@
    font-size: 1.4rem;
    border-color: #D3D3D3;
    border-radius: 1rem;
+   border: none;
+   background-color: #fff;
  }
 
  .dashboard .msg-form select {
    height: 3rem;
+   border-radius: .5rem;
  }
 
  .dashboard .msg-form textarea {
-   height: 15rem;
+   height: 10rem;
+   padding: 1rem;
    resize: none;
+   line-height: 2rem;
  }
 
  .dashboard .msg-form input[type=submit] {
@@ -218,6 +228,7 @@
    height: 4rem;
    border: none;
    border-radius: 1rem;
+   font-size: 1.6rem;
    background-color: #a5a4cb;
    color: #fff;
  }
@@ -228,9 +239,11 @@
    color: #000;
  }
 
- /* .dashboard .friend-container {
+ .dashboard .friend-container {
    grid-area: recipients;
- } */
+   display: flex;
+   align-items: center;
+ }
 
 
 

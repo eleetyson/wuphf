@@ -1,17 +1,29 @@
-<% if current_user.friends.present? %>
   <%= form_for @message do |f| %>
-    <%= f.label "Recipient" %><br>
-    <%= f.collection_select :friend_id, current_user.friends, :id, :name, include_blank: true, required: true  %><br><br>
+    <% if current_user.friends.present? %>
+      <%= f.label "Recipient" %><br>
+      <%= f.collection_select :friend_id, current_user.friends, :id, :name, include_blank: true, required: true %><br><br>
 
-    <%= f.label "Message" %><br>
-    <%= f.text_area :content, required: true %><br><br>
+      <%= f.label "Message" %><br>
+      <%= f.text_area :content, required: true, placeholder: "You should've sent me a WUPHF..." %><br><br>
 
-    <%= f.submit "Send WUPHF!" %>
+      <%= f.submit "Send WUPHF!" %>
+
+    <% else %>
+      <%= f.fields_for :friend do |f| %>
+        <%= f.label "Name" %><br>
+        <%= f.text_field :name, required: true, autocomplete: "off" %><br><br>
+
+        <%= f.label "Email" %><br>
+        <%= f.email_field :email, required: true, autocomplete: "off" %><br><br>
+
+        <%= f.label "", "Phone Number" %><br>
+        <%= f.telephone_field :phone, required: true, autocomplete: "off" %><br><br>
+
+        <%= f.label "Message" %><br>
+        <%= f.text_area :content, required: true, placeholder: "If it's urgent, just WUPHF me..." %><br><br>
+
+        <%= f.submit "Send first WUPHF!" %>
+      <% end %>
+    <% end %>
+
   <% end %>
-<% else %>
-  <%= form_for @message do |f| %>
-    <%= f.label "Message" %>
-    <%= f.text_area :content %>
-    <%= f.submit %>
-  <% end %>
-<% end %>
