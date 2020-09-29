@@ -1,9 +1,13 @@
 <div class="dashboard">
   <nav>
-    <div><a href="/">WUPHF</a></div>
-    <div class="logout"><%= link_to "Logout", logout_path, method: :post %></div>
+    <div><a href="/users/<%= current_user.id %>">WUPHF</a></div>
   </nav>
 
+  <div class="logout"><%= link_to "Logout", logout_path, method: :post %></div>
+
+  <section class="">
+
+  </section>
 
   <footer></footer>
 </div>

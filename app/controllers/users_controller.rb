@@ -30,8 +30,8 @@ class UsersController < ApplicationController
 # GET /users/:id
 # renders the dashboard (views/users/show)
   def show
+    @user = User.find_by(id: params[:id])
     render layout: "dashboard"
-    binding.pry
   end
 
   private

@@ -38,7 +38,7 @@ class SessionsController < ApplicationController
 # POST /logout
 # logs the user out and redirects them to the root page
   def destroy
-    session.delete(:user_id)
+    session.clear
     redirect_to root_path
   end
 
