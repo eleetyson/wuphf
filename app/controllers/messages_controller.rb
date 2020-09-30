@@ -22,6 +22,7 @@ class MessagesController < ApplicationController
         @message.friend = @friend
         @message.save
         # send it
+        # @message.send_wuphf
       else
         flash[:message] = "invalid recipient"
         redirect_to user_path(current_user)
