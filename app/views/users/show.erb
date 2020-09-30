@@ -1,6 +1,6 @@
 <div class="dashboard">
   <nav>
-    <div><a href="/users/<%= current_user.id %>">WUPHF</a></div>
+    <div><%= link_to "WUPHF", user_path(current_user) %></div>
   </nav>
 
   <div class="logout"><%= link_to "Logout", logout_path, method: :post %></div>

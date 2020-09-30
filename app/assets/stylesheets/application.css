@@ -86,7 +86,8 @@
  }
 
  .grid-signin .login-form,
- .dashboard .msg-form {
+ .dashboard .msg-form,
+ .dash-extended .user-form {
    padding: 3rem;
    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
  }
@@ -121,7 +122,8 @@
  }
 
  .grid-signin .login-form input[type=submit]:hover,
- .dashboard .msg-form input[type=submit]:hover {
+ .dashboard .msg-form input[type=submit]:hover,
+ .dash-extended .user-form input[type=submit]:hover {
    transform: scale(1.1);
  }
 
@@ -237,8 +239,7 @@
    text-indent: 0;
  }
 
- .dashboard .msg-form input[type=submit],
- .dash-extended .user-form input[type=submit] {
+ .dashboard .msg-form input[type=submit] {
    cursor: pointer;
    transition: all .2s ease-in-out;
    height: 4rem;
@@ -334,18 +335,7 @@
  /* dashboard page styling END */
 
  /* dashboard extended pages styling BEGIN */
- .dash-extended {
-   display: grid;
-   min-height: 100%;
-   grid-template-columns: 1fr 1fr 6fr 4fr 1fr 1fr;
-   grid-template-areas:
-    "n n n n . l"
-    ". . recipients compose . ."
-    ". . recipients compose . ."
-    "f f f f f f";
- }
 
- /* dashboard extended pages styling END */
  .dash-extended {
    display: grid;
    min-height: 100%;
@@ -376,7 +366,7 @@
 
  .dash-extended .user-container {
    grid-area: content;
-   padding: 2rem;
+   padding: 3rem;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -390,10 +380,22 @@
    color: #ef9565;
  }
 
+ .dash-extended .user-form input[type=submit] {
+   width: 25rem;
+   cursor: pointer;
+   transition: all .2s ease-in-out;
+   height: 4rem;
+   border: none;
+   border-radius: 1rem;
+   font-size: 1.6rem;
+   background-color: #a5a4cb;
+   color: #fff;
+   transition: all .2s ease-in-out;
+ }
+
  .dash-extended .user-form input[type=tel],
  .dash-extended .user-form input[type=text],
- .dash-extended .user-form input[type=email],
- .dash-extended .user-form input[type=submit] {
+ .dash-extended .user-form input[type=email] {
    width: 25rem;
    padding: .2rem 0;
    margin: .2rem 0;
@@ -414,11 +416,27 @@
    box-shadow: none;
  }
 
+ .dash-extended .user-form a {
+   text-decoration: none;
+   color: #ef9565;
+   font-size: 1rem;
+   padding: 0rem 0rem 1rem;
+ }
+
+ .dash-extended .user-form a:hover {
+   color: #f37022;
+ }
+
+ .dash-extended .user-form input[action=patch] {
+   background-color: #cc3700;
+ }
+
  .dash-extended .placeholder {
    grid-area: placeholder;
    padding: 3rem 2rem;
  }
 
+ /* dashboard extended pages styling END */
 
 
  /*
