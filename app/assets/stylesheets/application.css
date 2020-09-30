@@ -181,7 +181,7 @@
 
  .dashboard .msg-container {
    grid-area: compose;
-   padding: 2rem 1rem 1rem;
+   padding: 2rem 1rem 1rem 3rem;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -264,12 +264,12 @@
  .dashboard .empty {
    height: 20rem;
    width: 20rem;
-   margin: 5rem;
+   margin: 1rem;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   border-radius: 1rem;
+   border-radius: 0.5rem;
    background-color: #a5a4cb;
    box-shadow: rgba(165, 164, 203, 0.2) 0px 4px 16px, rgba(165, 164, 203, 0.2) 0px 8px 24px, rgba(165, 164, 203, 0.2) 0px 16px 56px;
    /* background-color: #f9d29d;
@@ -291,12 +291,48 @@
  }
 
  .dashboard .card {
-
+   height: 15rem;
+   width: 20rem;
+   margin: 1rem;
+   padding: 1.5rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   border-radius: 1rem;
+   color: #fff;
+   box-shadow: rgba(239, 149, 101, 0.05) 0px 4px 16px, rgba(239, 149, 101, 0.05) 0px 8px 24px, rgba(239, 149, 101, 0.05) 0px 16px 56px;
  }
 
- .dashboard footer {
-   grid-area: f;
+ .dashboard .card h3 {
+   align-self: center;
+   font-family: 'Permanent Marker', cursive;
+   font-size: 1.6rem;
+   color: #ef9565;
+   line-height: 0.6rem;
  }
+
+ .dashboard .card p {
+   font-size: 1rem;
+   color: #ef9565;
+ }
+
+ .dashboard .card h4 {
+   align-self: flex-end;
+   font-size: 1rem;
+ }
+
+ .dashboard .card h4 a {
+   text-decoration: none;
+   color: #a5a4cb;
+ }
+
+ .dashboard .card h4 a:hover,
+ .dashboard .card h4 a:active {
+   color: #564e96;
+ }
+
+
 
  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
  text-align: left;

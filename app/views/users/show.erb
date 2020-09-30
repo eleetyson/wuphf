@@ -18,9 +18,11 @@
   <section class="friend-container">
     <div class="empty">
       <%= link_to "+ Add a Friend", new_user_friend_path(current_user) %><br>
+        <% if current_user.friends.present? %>
       <%= link_to "// All Friends", user_friends_path(current_user) %>
     </div>
-    <%= render 'cards' %>
+      <%= render 'cards' %>
+      <% end %>
   </section>
 
 </div>
