@@ -17,8 +17,8 @@
 
   <section class="friend-container">
     <div class="empty">
-      <a href="/">+ Add a Friend</a><br>
-      <a href="#/">// All Friends</a>
+      <%= link_to "+ Add a Friend", new_user_friend_path(current_user) %><br>
+      <%= link_to "// All Friends", user_friends_path(current_user) %>
     </div>
     <%= render 'cards' %>
   </section>
