@@ -11,8 +11,8 @@ class Message < ApplicationRecord
   end
 
   def deliver_text_message
-    account_sid = "#{ENV['ACCOUNT_SID']}"
-    auth_token = "#{ENV['AUTH_TOKEN']}"
+    account_sid = ENV['TWILIO_ID']
+    auth_token = ENV['TWILIO_TOKEN']
     client = Twilio::REST::Client.new(account_sid, auth_token)
 
     from = '+14782490442'
