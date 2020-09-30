@@ -281,13 +281,13 @@
    text-decoration: none;
    color: #fff;
    font-size: 1.8rem;
-   transition: all .2s ease-in-out;
+   transition: all .3s ease-in-out;
  }
 
  .dashboard .empty a:hover,
  .dashboard .empty a:active {
    color: #dbdbdb;
-   transform: scale(1.1);
+   transform: scale(1.05);
  }
 
  .dashboard .card {
