@@ -94,7 +94,7 @@
    background-color: #f0f0f0;
    border: none;
    border-radius: 1rem;
-   padding: .2rem;
+   padding: .2rem 0;
    margin: .2rem 0;
    width: 20rem;
    height: 3rem;
@@ -180,7 +180,7 @@
 
  .dashboard .msg-container {
    grid-area: compose;
-   padding: 3rem 1rem 1rem;
+   padding: 2rem 1rem 1rem;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -201,13 +201,25 @@
  .dashboard .msg-form input[type=email],
  .dashboard .msg-form input[type=submit] {
    width: 25rem;
-   padding: .5rem;
-   margin-top: .5rem;
-   font-size: 1.4rem;
+   padding: .2rem 0;
+   margin: .2rem 0;
    border-color: #D3D3D3;
    border-radius: 1rem;
    border: none;
    background-color: #fff;
+   height: 3rem;
+   font-size: 1.3rem;
+   text-indent: 1rem;
+ }
+
+ .dashboard .msg-form select:focus,
+ .dashboard .msg-form textarea:focus,
+ .dashboard .msg-form input[type=tel]:focus,
+ .dashboard .msg-form input[type=text]:focus,
+ .dashboard .msg-form input[type=email]:focus,
+ .dashboard .msg-form input[type=submit]:focus {
+   outline: none;
+   box-shadow: none;
  }
 
  .dashboard .msg-form select {
@@ -220,6 +232,7 @@
    padding: 1rem;
    resize: none;
    line-height: 2rem;
+   text-indent: 0;
  }
 
  .dashboard .msg-form input[type=submit] {
@@ -244,7 +257,6 @@
    display: flex;
    align-items: center;
  }
-
 
 
 
