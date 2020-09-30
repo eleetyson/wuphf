@@ -1,0 +1,31 @@
+<div class="dash-extended">
+  <nav>
+    <div><a href="/users/<%= current_user.id %>">WUPHF</a></div>
+  </nav>
+
+  <div class="logout"><%= link_to "Logout", logout_path, method: :post %></div>
+
+  <section class="user-container">
+    <div class="user-form">
+
+      <%= form_for :friend, url: "/users/#{current_user.id}/friends", method: :post do |f| %>
+        <%= f.label "Name" %><br>
+        <%= f.text_field :name, required: true %><br><br>
+
+        <%= f.label "Email" %><br>
+        <%= f.email_field :email, required: true %><br><br>
+
+        <%= f.label "Phone"%><br>
+        <%= f.telephone_field :phone, required: true %><br><br>
+
+        <%= f.submit %><br><br>
+      <% end %>
+
+      <p><%= flash[:message] %><p>
+    </div>
+  </section>
+
+  <section class="placeholder">
+    <div><%= inline_svg_tag "man-petting-dog.svg" %></div>
+  </section>
+</div>

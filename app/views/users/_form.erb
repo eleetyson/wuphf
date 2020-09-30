@@ -1,4 +1,4 @@
-<%= form_for @user, html: { autocomplete: "off" } do |f| %>
+<%= form_for @user do |f| %>
   <%= f.label "", "Full Name" %><br>
   <%= f.text_field :name, required: true %><br><br>
 

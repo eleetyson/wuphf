@@ -1,6 +1,6 @@
 class FriendsController < ApplicationController
   before_action :require_login
-  layout: "dashboard"
+  layout "dashboard"
 
   def index
   end
@@ -8,11 +8,12 @@ class FriendsController < ApplicationController
 # GET /users/:id/friends/new
 # new_user_friend_path(current_user)
   def new
-    @friend = current_user.friends.build
+    @friend = Friend.new
   end
 
 # POST /users/:id/friends
   def create
+    
   end
 
 # GET /users/:user_id/friends/:id/edit

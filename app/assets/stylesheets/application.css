@@ -59,6 +59,7 @@
 
  .grid-signin nav a,
  .dashboard nav a,
+ .dash-extended nav a,
  .dashboard .logout a,
  .dash-extended .logout a {
    text-decoration: none;
@@ -67,6 +68,7 @@
 
  .grid-signin nav a:hover,
  .dashboard nav a:hover,
+ .dash-extended nav a:hover,
  .dashboard .logout a:hover,
  .dash-extended .logout a:hover {
    text-decoration: none;
@@ -187,7 +189,7 @@
  }
 
  .dashboard .msg-form {
-   border-radius: 0.5rem;
+   border-radius: .5rem;
  }
 
  .dashboard .msg-form label {
@@ -235,7 +237,8 @@
    text-indent: 0;
  }
 
- .dashboard .msg-form input[type=submit] {
+ .dashboard .msg-form input[type=submit],
+ .dash-extended .user-form input[type=submit] {
    cursor: pointer;
    transition: all .2s ease-in-out;
    height: 4rem;
@@ -246,7 +249,8 @@
    color: #fff;
  }
 
- .dashboard .msg-form input[type=submit]:focus {
+ .dashboard .msg-form input[type=submit]:focus,
+ .dash-extended .user-form input[type=submit]:focus {
    outline: none;
    box-shadow: none;
    color: #000;
@@ -268,7 +272,7 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   border-radius: 0.5rem;
+   border-radius: .5rem;
    background-color: #a5a4cb;
    box-shadow: rgba(165, 164, 203, 0.2) 0px 4px 16px, rgba(165, 164, 203, 0.2) 0px 8px 24px, rgba(165, 164, 203, 0.2) 0px 16px 56px;
  }
@@ -353,7 +357,7 @@
     "f f f f f f";
  }
 
- .dashboard nav {
+ .dash-extended nav {
    grid-area: t;
    display: flex;
    font-size: 2.8rem;
@@ -371,12 +375,99 @@
  }
 
  .dash-extended .user-container {
-
+   grid-area: content;
+   padding: 2rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
  }
 
  .dash-extended .user-form {
-
+   border-radius: .5rem;
  }
+
+ .dash-extended .user-form label {
+   color: #ef9565;
+ }
+
+ .dash-extended .user-form input[type=tel],
+ .dash-extended .user-form input[type=text],
+ .dash-extended .user-form input[type=email],
+ .dash-extended .user-form input[type=submit] {
+   width: 25rem;
+   padding: .2rem 0;
+   margin: .2rem 0;
+   border-color: #D3D3D3;
+   border-radius: 1rem;
+   border: none;
+   background-color: #fff;
+   height: 3rem;
+   font-size: 1.3rem;
+   text-indent: 1rem;
+ }
+
+ .dash-extended .user-form input[type=tel]:focus,
+ .dash-extended .user-form input[type=text]:focus,
+ .dash-extended .user-form input[type=email]:focus,
+ .dash-extended .user-form input[type=submit]:focus {
+   outline: none;
+   box-shadow: none;
+ }
+
+ .dash-extended .placeholder {
+   grid-area: placeholder;
+   padding: 3rem 2rem;
+ }
+
+
+
+ /*
+ .dashboard .msg-container {
+   grid-area: compose;
+   padding: 2rem 1rem 1rem 3rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .dashboard .msg-form {
+   border-radius: .5rem;
+ }
+
+ .dashboard .msg-form label {
+   color: #ef9565;
+ }
+
+ .dashboard .msg-form select,
+ .dashboard .msg-form textarea,
+ .dashboard .msg-form input[type=tel],
+ .dashboard .msg-form input[type=text],
+ .dashboard .msg-form input[type=email],
+ .dashboard .msg-form input[type=submit] {
+   width: 25rem;
+   padding: .2rem 0;
+   margin: .2rem 0;
+   border-color: #D3D3D3;
+   border-radius: 1rem;
+   border: none;
+   background-color: #fff;
+   height: 3rem;
+   font-size: 1.3rem;
+   text-indent: 1rem;
+ }
+
+ .dashboard .msg-form select:focus,
+ .dashboard .msg-form textarea:focus,
+ .dashboard .msg-form input[type=tel]:focus,
+ .dashboard .msg-form input[type=text]:focus,
+ .dashboard .msg-form input[type=email]:focus,
+ .dashboard .msg-form input[type=submit]:focus {
+   outline: none;
+   box-shadow: none;
+ }
+
+
+  */
 
 
 
