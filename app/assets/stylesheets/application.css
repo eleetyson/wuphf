@@ -36,7 +36,6 @@
  }
 
  /* sign in / sign up pages styling BEGIN */
- /* 6 column layout */
  .grid-signin {
    display: grid;
    min-height: 100%;
@@ -60,14 +59,16 @@
 
  .grid-signin nav a,
  .dashboard nav a,
- .dashboard .logout a {
+ .dashboard .logout a,
+ .dash-extended .logout a {
    text-decoration: none;
    color: #564e96;
  }
 
  .grid-signin nav a:hover,
  .dashboard nav a:hover,
- .dashboard .logout a:hover {
+ .dashboard .logout a:hover,
+ .dash-extended .logout a:hover {
    text-decoration: none;
    color: #a5a4cb;
    font-weight: 900;
@@ -146,11 +147,9 @@
    font-size: 1.5rem;
    font-style: italic;
  }
-
  /* sign in / sign up pages styling END */
 
- /* dashboard pages styling BEGIN */
- /* 6 column layout */
+ /* dashboard page styling BEGIN */
  .dashboard {
    display: grid;
    min-height: 100%;
@@ -328,22 +327,60 @@
  .dashboard .card h4 a:active {
    color: #564e96;
  }
+ /* dashboard page styling END */
+
+ /* dashboard extended pages styling BEGIN */
+ .dash-extended {
+   display: grid;
+   min-height: 100%;
+   grid-template-columns: 1fr 1fr 6fr 4fr 1fr 1fr;
+   grid-template-areas:
+    "n n n n . l"
+    ". . recipients compose . ."
+    ". . recipients compose . ."
+    "f f f f f f";
+ }
+
+ /* dashboard extended pages styling END */
+ .dash-extended {
+   display: grid;
+   min-height: 100%;
+   grid-template-columns: 1fr 1fr 6fr 4fr 1fr 1fr;
+   grid-template-areas:
+    "t t t t . exit"
+    ". . placeholder content . ."
+    ". . placeholder content . ."
+    "f f f f f f";
+ }
+
+ .dashboard nav {
+   grid-area: t;
+   display: flex;
+   font-size: 2.8rem;
+   font-family: 'Permanent Marker', cursive;
+   padding: 2rem 4rem;
+   color: #564e96;
+   text-decoration: none;
+ }
+
+ .dash-extended .logout {
+   grid-area: exit;
+   margin-left: 2rem;
+   font-size: 1.5rem;
+   padding: 3.75rem 4rem 0rem;
+ }
+
+ .dash-extended .user-container {
+
+ }
+
+ .dash-extended .user-form {
+
+ }
 
 
-
- /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
- text-align: left;
- background-color: #f9d29d;
- background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%); */
-
-
-
- /* dashboard pages styling END */
 
  /* bright orange: color: #f37022 */
  /* dull orange: color: #ef9565 */
  /* bright purple: color: #564e96 */
  /* dull purple: color: #a5a4cb */
-
- /* font-family: 'Nunito', sans-serif;
- header - font-family: 'Quicksand', sans-serif; */

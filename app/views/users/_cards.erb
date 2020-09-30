@@ -1,7 +1,7 @@
 <% current_user.friends.recently_added.each do |friend| %>
   <div class="card">
     <h3><%= friend.name %></h3>
-    <p>📧 <%= friend.email %></p>
+    <p>📬 <%= friend.email %></p>
     <p>☎️ <%= friend.phone %></p>
     <h4><%= link_to "Edit", edit_user_friend_path(current_user, friend) %></h4>
   </div>
