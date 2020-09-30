@@ -122,7 +122,8 @@
    transform: scale(1.1);
  }
 
- .grid-signin .login-form p {
+ .grid-signin .login-form p,
+ .dashboard .msg-form p {
    text-align: center;
    font-size: .9rem;
    word-wrap: break-word;

@@ -10,8 +10,8 @@ class MessagesController < ApplicationController
       if @friend.save && @message.save
         # send it
       else
-        flash[:message] = @user.errors.full_messages.first
-        redirect_to user_path(@user)
+        flash[:message] = @friend.errors.full_messages.first || @message.errors.full_messages.first
+        redirect_to user_path(current_user)
       end
 
     else # message creation with existing recipient selection
@@ -24,7 +24,7 @@ class MessagesController < ApplicationController
         # send it
       else
         flash[:message] = "invalid recipient"
-        redirect_to user_path(@user)
+        redirect_to user_path(current_user)
       end
     end
 
