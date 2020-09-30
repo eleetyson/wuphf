@@ -10,6 +10,12 @@ class FriendsController < ApplicationController
   def create
   end
 
+  def edit
+  end
+
+  def update
+  end
+
   private
 
   def friend_params

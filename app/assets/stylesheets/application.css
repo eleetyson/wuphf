@@ -262,9 +262,9 @@
  }
 
  .dashboard .empty {
-   height: 20rem;
-   width: 20rem;
-   margin: 1rem;
+   height: 15rem;
+   width: 15rem;
+   margin: 1.2rem;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -280,7 +280,7 @@
  .dashboard .empty a {
    text-decoration: none;
    color: #fff;
-   font-size: 1.8rem;
+   font-size: 1.6rem;
    transition: all .3s ease-in-out;
  }
 
@@ -293,7 +293,7 @@
  .dashboard .card {
    height: 15rem;
    width: 20rem;
-   margin: 1rem;
+   margin: 1.2rem;
    padding: 1.5rem;
    display: flex;
    flex-direction: column;
@@ -307,7 +307,7 @@
  .dashboard .card h3 {
    align-self: center;
    font-family: 'Permanent Marker', cursive;
-   font-size: 1.6rem;
+   font-size: 1.5rem;
    color: #ef9565;
    line-height: 0.6rem;
  }
