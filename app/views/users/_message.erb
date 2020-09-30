@@ -1,25 +1,11 @@
 <%= form_for @message do |f| %>
-
-  <% if current_user.friends.present? %>
-    <%= f.label "Recipient" %><br>
-    <%= f.collection_select :friend_id, current_user.friends, :id, :name, include_blank: true, required: true %><br><br>
-  <% else %>
-    <%= f.fields_for :friend do |f| %>
-      <%= f.label "", "Friend's Name" %><br>
-      <%= f.text_field :name, required: true, autocomplete: "off", placeholder: "John Legend" %><br><br>
-
-      <%= f.label "", "Their Email" %><br>
-      <%= f.email_field :email, required: true, autocomplete: "off", placeholder: "johnlegend@mac.com" %><br><br>
-
-      <%= f.label "", "Their Phone Number" %><br>
-      <%= f.telephone_field :phone, required: true, autocomplete: "off", placeholder: "3102229999" %><br><br>
-    <% end %>
-  <% end %>
+  <%= f.label "Recipient" %><br>
+  <%= f.collection_select :friend_id, @friends, :id, :name, include_blank: true, required: true %><br><br>
 
   <%= f.label "Message" %><br>
   <%= f.text_area :content, required: true, placeholder: "You should've sent me a WUPHF..." %><br>
 
-  <%= f.submit "Send WUPHF!" if current_user.friends.present? %><br>
-  <%= f.submit "Send first WUPHF!" if !current_user.friends.present? %><br>
-
+  <%= f.submit "Send WUPHF!" %><br>
 <% end %>
+
+<p><%= flash[:message] %><p>

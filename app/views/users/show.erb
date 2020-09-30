@@ -7,7 +7,11 @@
 
   <section class="msg-container">
     <div class="msg-form">
-      <%= render 'message' %>
+      <% if current_user.friends.present? %>
+        <%= render 'message' %>
+      <% else %>
+        <%= render 'first-wuphf' %>
+      <% end %>
     </div>
   </section>
 

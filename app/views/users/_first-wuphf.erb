@@ -1,0 +1,17 @@
+<%= form_tag messages_path, method: "post" do %>
+  <%= label_tag "", "Friend's Name" %><br>
+  <%= text_field_tag :name, '', required: true, autocomplete: "disabled", placeholder: "John Legend", autofocus: true %><br><br>
+
+  <%= label_tag "", "Their Email" %><br>
+  <%= email_field_tag :email, '', required: true, autocomplete: "disabled", placeholder: "johnlegend@mac.com" %><br><br>
+
+  <%= label_tag "", "Their Phone Number" %><br>
+  <%= telephone_field_tag :phone, '', required: true, autocomplete: "disabled", placeholder: "3102229999" %><br><br>
+
+  <%= label_tag "Message" %><br>
+  <%= text_area_tag :content, '', required: true, placeholder: "You should've sent me a WUPHF..." %><br>
+
+  <%= submit_tag "Send first WUPHF!" %><br>
+<% end %>
+
+<p><%= flash[:message] %><p>

@@ -2,32 +2,32 @@ class MessagesController < ApplicationController
   before_action :require_login
 
 # POST /messages
-# to add logic handling input from form for new friend
-# or simpler input from form for msg to existing friend
-
-# message[content]
-# message[friend][name]
-# message[friend][email]
-# message[friend][phone]
   def create
-    if params[:message][:friend]
-      @message = Message.new(content: params[:message][:content])
-      @message.user = current_user
-      f = Friend.new(name: params[:message][:friend][:name], email: params[:message][:friend][:email], phone: params[:message][:friend][:phone])
-      if f.save
-        @message.friend = f
+    if params[:email] # message creation for user sending first WUPHF
+      @message = Message.new(content: params[:content], user_id: current_user.id)
+      @friend = @message.build_friend(name: params[:name], email: params[:email], phone: params[:phone])
+
+      if @friend.save && @message.save
+        # send it
       else
-        "ds"
-        # error message
+        flash[:message] = @user.errors.full_messages.first
+        redirect_to user_path(@user)
       end
-    else
-      @message = Message.new(message_params)
+
+    else # message creation with existing recipient selection
+      @message = Message.new(content: params[:message][:content], user_id: current_user.id)
+      @friend = current_user.friends.find_by(id: params[:message][:friend_id])
+
+      if @friend
+        @message.friend = @friend
+        @message.save
+        # send it
+      else
+        flash[:message] = "invalid recipient"
+        redirect_to user_path(@user)
+      end
     end
+
   end
 
-  private
-# to add params that go level deeper from new friend
-  def message_params
-    params.require(:message).permit(:friend_id, :content)
-  end
 end

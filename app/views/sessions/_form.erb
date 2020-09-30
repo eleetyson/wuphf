@@ -1,9 +1,9 @@
 <%= form_tag login_path, method: :post do %>
   <%= label_tag "Email" %><br>
-  <%= email_field_tag :email, autocomplete="", required: true %><br><br>
+  <%= email_field_tag :email, '', required: true, autocomplete: "disabled" %><br><br>
 
   <%= label_tag "Password" %><br>
-  <%= password_field_tag :password, autocomplete="", required: true %><br><br>
+  <%= password_field_tag :password '', required: true, autocomplete: "disabled" %><br><br>
 
   <%= submit_tag "Log In" %><br><br>
 <% end %>
