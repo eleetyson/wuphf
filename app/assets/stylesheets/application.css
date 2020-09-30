@@ -272,9 +272,6 @@
    border-radius: 0.5rem;
    background-color: #a5a4cb;
    box-shadow: rgba(165, 164, 203, 0.2) 0px 4px 16px, rgba(165, 164, 203, 0.2) 0px 8px 24px, rgba(165, 164, 203, 0.2) 0px 16px 56px;
-   /* background-color: #f9d29d;
-   background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
  }
 
  .dashboard .empty a {
