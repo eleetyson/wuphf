@@ -34,7 +34,15 @@ class FriendsController < ApplicationController
 # PATCH /users/:user_id/friends/:id
 # user_friend_path(current_user, the friend)
   def update
-    
+    # something
+
+    # if it saves
+      # do this
+    # else
+      # do that
+      # flash[:message] = @user.errors.full_messages.first
+      # redirect depends on where request came from (edit or delete form)
+    # end
   end
 
   private
