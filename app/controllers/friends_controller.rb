@@ -41,7 +41,19 @@ class FriendsController < ApplicationController
     # else
       # do that
       # flash[:message] = @user.errors.full_messages.first
-      # redirect depends on where request came from (edit or delete form)
+      # redirect_to edit_user_friend_path(current_user, the friend)
+    # end
+  end
+
+# DELETE /users/:user_id/friends/:id
+  def destroy
+    # double check that user is authorized to delete the given friend
+
+    # if deleting works...
+      # do this
+    # else
+      # do that
+      # redirect_to user_path(current_user)
     # end
   end
 

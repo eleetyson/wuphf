@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/auth/google_oauth2/callback' => 'sessions#omniauth'
 
   resources :users, only: [:new, :create, :show] do
-    resources :friends, only: [:index, :new, :create, :edit, :update]
+    resources :friends, only: [:index, :new, :create, :edit, :update, :destroy]
   end
 
   resources :messages, only: [:create]
