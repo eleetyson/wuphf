@@ -16,7 +16,7 @@ class Message < ApplicationRecord
     client = Twilio::REST::Client.new(account_sid, auth_token)
 
     from = '+14782490442'
-    to = "+1" + self.friend.phone
+    to = "+1" + self.friend.phone.strip
     body = "WUPHF from #{self.friend.name}:\n\n" + self.content
     client.messages.create(from: from, to: to, body: body)
   end
