@@ -1,7 +1,9 @@
 ### WUPHF
+Theranos. Nikola. WUPHF. Recent history is littered with the unfulfilled visions of charismatic, though equally dishonest entrepreneurs.
 
-Theranos. Nikola. WUPHF. Recent history is littered with the unfulfilled visions of charismatic, though equally dishonest, entrepreneurs.
+While I can't (yet) bring Ryan Howard's brainchild to life, I've created a simplified version of WUPHF to help with distant socializing. Fire off emails and text messages simultaneously from a single dashboard.
 
-While I can't (yet) bring Ryan Howard's brainchild to life, I've created a simplified version of WUPHF to help anyone annoy their friends.
+You can start annoying your friends at <https://trywuphf.herokuapp.com>.
 
-Fire off emails and text messages simultaneously from your personal dashboard.
+###### Credit
+WUPHF is built on Rails, HTML, and CSS. It uses Rails' Action Mailer to send emails and [Twilio's API](https://www.twilio.com/docs/sms/quickstart/ruby) for SMS messages. All illustrations from [Pablo Stanley](https://www.opendoodles.com/), quotes from The Office, and typos from me.
