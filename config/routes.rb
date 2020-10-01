@@ -12,6 +12,3 @@ Rails.application.routes.draw do
 
   resources :messages, only: [:create]
 end
-
-# <%= form_for :friend, method: :patch, url: user_friend_path(current_user, @friend) do |f| %>
-# "#{submit_button_display(@friend)}"
