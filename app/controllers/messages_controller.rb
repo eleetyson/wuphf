@@ -2,6 +2,9 @@ class MessagesController < ApplicationController
   before_action :require_login
 
 # POST /messages
+# sends a message and associates it depending on whether...
+# a) a new user is sending their first message to new friend
+# b) a user selected an existing friend to WUPHF at
   def create
     if params[:email] # message creation for user sending first WUPHF
       @message = Message.new(content: params[:content], user_id: current_user.id)
@@ -27,8 +30,8 @@ class MessagesController < ApplicationController
         flash[:message] = "invalid recipient"
       end
 
-    end # end if params[:email] / else
+    end
     redirect_to user_path(current_user)
-  end # end create action
+  end
 
 end

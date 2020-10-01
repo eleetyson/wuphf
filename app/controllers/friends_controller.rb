@@ -9,13 +9,13 @@ class FriendsController < ApplicationController
   end
 
 # GET /users/:id/friends/new
-# new_user_friend_path(current_user)
+# renders form for user to add a friend
   def new
     @friend = Friend.new
   end
 
 # POST /users/:id/friends
-# params[:friend][:name], params[:friend][:email], params[:friend][:phone]
+# creates friend and associates with the current user if given valid input
   def create
     @message = Message.new(content: "test", user_id: current_user.id)
     @friend = Friend.new(friend_params)
@@ -31,13 +31,13 @@ class FriendsController < ApplicationController
   end
 
 # GET /users/:user_id/friends/:id/edit
-# edit_user_friend_path(current_user, the friend)
+# renders form for user to edit an existing friend
   def edit
     @friend = current_user.friends.find_by(id: params[:id])
   end
 
 # PATCH /users/:user_id/friends/:id
-# user_friend_path(current_user, the friend)
+# updates a user's friend if given valid input
   def update
     @friend = current_user.friends.find_by(id: params[:id])
 
@@ -52,6 +52,7 @@ class FriendsController < ApplicationController
   end
 
 # DELETE /users/:user_id/friends/:id
+# deletes a user's given friend if given valid input
   def destroy
     @friend = current_user.friends.find_by(id: params[:id])
 

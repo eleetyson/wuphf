@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :require_login, only: [:show]
   before_action :require_logout, only: [:home, :new, :create]
 
-# root
+# root for login / signup
   def home
   end
 
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
   end
 
 # GET /users/:id
-# renders the dashboard (views/users/show)
+# renders the dashboard for existing users
   def show
     @user = User.find_by(id: params[:id])
 
