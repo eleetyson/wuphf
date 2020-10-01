@@ -34,29 +34,31 @@ class FriendsController < ApplicationController
 # PATCH /users/:user_id/friends/:id
 # user_friend_path(current_user, the friend)
   def update
-    # something
+    @friend = current_user.friends.find_by(id: params[:id])
 
-    # if it saves
-      # do this
-    # else
-      # do that
-      # flash[:message] = @user.errors.full_messages.first
-      # redirect_to edit_user_friend_path(current_user, the friend)
-    # end
+    if @friend
+      @friend.update(friend_params)
+      flash[:message] = "updated successfully"
+    else
+      flash[:message] = "invalid access"
+    end
+
+    redirect_to user_path(current_user)
   end
 
 # DELETE /users/:user_id/friends/:id
   def destroy
     binding.pry
     @friend = current_user.friends.find_by(id: params[:id])
-    # double check that user is authorized to delete the given friend
 
-    # if deleting works...
-      # do this
-    # else
-      # do that
-      # redirect_to user_path(current_user)
-    # end
+    if @friend
+      @friend.destroy
+      flash[:message] = "friend deleted"
+    else
+      flash[:message] = "invalid access"
+    end
+
+    redirect_to user_path(current_user)
   end
 
   private
