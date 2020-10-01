@@ -113,12 +113,29 @@
  .grid-signin .login-form input[type=submit] {
    width: 20rem;
    height: 3rem;
-   font-size: 1.6rem;
+   font-size: 1.5rem;
    cursor: pointer;
    border: none;
    background-color: #ef9565;
    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
    transition: all .2s ease-in-out;
+ }
+
+ .grid-signin .login-form input[value="Sign Up or Log In"] {
+   background-color: #fff;
+   color: #757575;
+   font-size: 1.5rem;
+   text-align: center;
+   border-radius: 0.5rem;
+   background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png');
+   background-size: 1.5rem;
+   background-repeat: no-repeat;
+   background-position: 12% 50%;
+   padding-left: 3rem;
+ }
+
+ .grid-signin .login-form input[value="Sign Up or Log In"]:hover {
+   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(136, 165, 191, 0.48) -6px -2px 16px 0px;
  }
 
  .grid-signin .login-form input[type=submit]:hover,

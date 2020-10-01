@@ -21,7 +21,7 @@ class Message < ApplicationRecord
     client.messages.create(from: from, to: to, body: body)
   end
 
-# calling the #send_wuphf method on the UserMailer class to send the email
+# calls the #send_wuphf method on the UserMailer class to send the email
   def deliver_email
     UserMailer.wuphf_email(self).deliver_now
   end
