@@ -3,8 +3,6 @@ class Message < ApplicationRecord
   belongs_to :friend
   validates :content, presence: true
 
-  private
-
 # triggers the text message and email delivery
   def send_wuphf
     self.deliver_text_message

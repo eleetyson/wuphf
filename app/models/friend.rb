@@ -6,5 +6,5 @@ class Friend < ApplicationRecord
   validates :phone, presence: true, length: { is: 10 }
   # AR scope method to return a user's two most recently added friends (ex: user.friends.recently_added)
   # could be used at the class level in a feed displaying recent activity
-  scope :recently_added, -> { order(created_at: :desc).limit(2) }
+  scope :recently_added, -> { order(created_at: :desc).limit(3) }
 end

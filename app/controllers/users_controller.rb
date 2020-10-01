@@ -37,7 +37,7 @@ class UsersController < ApplicationController
 
     if @user.id == current_user.id
       @message = @user.messages.build
-      @friends = current_user.friends
+      @friends = current_user.friends.distinct
       render layout: "dashboard"
     else
       redirect_to user_path(@user)

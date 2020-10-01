@@ -1,4 +1,4 @@
-<% current_user.friends.each do |friend| %>
+<% current_user.friends.recently_added.distinct.each do |friend| %>
   <div class="card">
     <h3><%= friend.name %></h3>
     <p>📬 <%= friend.email %></p>
