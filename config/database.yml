@@ -81,4 +81,4 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  username: wuphf #use 'admin' if doesn't work
+  username: admin # use either 'admin' or 'wuphf'
