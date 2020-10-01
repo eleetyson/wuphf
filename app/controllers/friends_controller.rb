@@ -47,6 +47,8 @@ class FriendsController < ApplicationController
 
 # DELETE /users/:user_id/friends/:id
   def destroy
+    binding.pry
+    @friend = current_user.friends.find_by(id: params[:id])
     # double check that user is authorized to delete the given friend
 
     # if deleting works...
