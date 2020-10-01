@@ -9,7 +9,7 @@
     <div class="user-form">
       <h4><%= link_to "« BACK", user_path(current_user) %></h4>
 
-      <%= form_for :friend do |f| %>
+      <%= form_for :friend, method: :patch, url: user_friend_path(current_user, @friend) do |f| %>
         <%= f.label "", "Friend's Name" %><br>
         <%= f.text_field :name, required: true %><br><br>
 
