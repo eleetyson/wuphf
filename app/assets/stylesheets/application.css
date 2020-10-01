@@ -121,7 +121,7 @@
    transition: all .2s ease-in-out;
  }
 
- .grid-signin .login-form input[value="Sign Up or Log In"] {
+ .grid-signin .login-form input[value="Sign on with Google"] {
    background-color: #fff;
    color: #757575;
    font-size: 1.5rem;
@@ -134,7 +134,7 @@
    padding-left: 3rem;
  }
 
- .grid-signin .login-form input[value="Sign Up or Log In"]:hover {
+ .grid-signin .login-form input[value="Sign on with Google"]:hover {
    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(136, 165, 191, 0.48) -6px -2px 16px 0px;
  }
 
