@@ -27,8 +27,8 @@ class MessagesController < ApplicationController
         flash[:message] = "invalid recipient"
         redirect_to user_path(current_user)
       end
-    end
 
+    end # end if params[:email] / else
   end
 
 end
