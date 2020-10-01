@@ -2,7 +2,10 @@ class FriendsController < ApplicationController
   before_action :require_login
   layout "dashboard"
 
-  def index
+# GET /users/:user_id/friends/:id/
+# redirects to edit form displaying the given friend's profile
+  def show
+    redirect_to edit_user_friend_path(current_user, params[:id])
   end
 
 # GET /users/:id/friends/new

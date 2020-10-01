@@ -22,7 +22,7 @@ class MessagesController < ApplicationController
         @message.friend = @friend
         @message.save
         @message.send_wuphf
-        flash[:message] = "WUPHF sent :)"
+        flash[:message] = "WUPHF sent ⚡"
       else
         flash[:message] = "invalid recipient"
       end

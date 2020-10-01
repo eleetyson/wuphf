@@ -4,7 +4,7 @@ class Friend < ApplicationRecord
   validates :name, presence: true
   validates :email, presence: true
   validates :phone, presence: true, length: { is: 10 }
-  # AR scope method to return a user's two most recently added friends (ex: user.friends.recently_added)
+  # AR scope method to return a user's friends in reverse order of creation (ex: user.friends.recently_added)
   # could be used at the class level in a feed displaying recent activity
-  scope :recently_added, -> { order(created_at: :desc).limit(3) }
+  scope :recently_added, -> { order(created_at: :desc) }
 end
