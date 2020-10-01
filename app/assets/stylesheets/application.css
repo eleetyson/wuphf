@@ -424,10 +424,16 @@
    padding: 0rem 0rem 1rem;
  }
 
+ .dash-extended .user-form p {
+   text-align: center;
+   font-size: .9rem;
+   word-wrap: break-word;
+ }
+
  .dash-extended .user-form a:hover {
    color: #f37022;
  }
- 
+
  .dash-extended .placeholder {
    grid-area: placeholder;
    padding: 3rem 2rem;

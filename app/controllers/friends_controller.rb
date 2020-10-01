@@ -14,15 +14,17 @@ class FriendsController < ApplicationController
 # POST /users/:id/friends
 # params[:friend][:name], params[:friend][:email], params[:friend][:phone]
   def create
-    #something
+    @message = Message.new(content: "test", user_id: current_user.id)
+    @friend = Friend.new(friend_params)
+    @message.friend = @friend
 
-    # if it saves
-      # do this
-    # else
-      # do that
-      # flash[:message] = @user.errors.full_messages.first
-      # redirect_to new_user_friend_path(current_user)
-    # end
+    if @friend.save && @message.save
+      flash[:message] = "#{@friend.name}'s profile was created"
+      redirect_to user_path(current_user)
+    else
+      flash[:message] = @friend.errors.full_messages.first || @message.errors.full_messages.first
+      redirect_to new_user_friend_path(current_user)
+    end
   end
 
 # GET /users/:user_id/friends/:id/edit
