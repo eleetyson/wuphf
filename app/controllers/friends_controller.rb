@@ -38,7 +38,7 @@ class FriendsController < ApplicationController
 
     if @friend
       @friend.update(friend_params)
-      flash[:message] = "updated successfully"
+      flash[:message] = "#{@friend.name}'s profile was updated"
     else
       flash[:message] = "invalid access"
     end
@@ -48,7 +48,6 @@ class FriendsController < ApplicationController
 
 # DELETE /users/:user_id/friends/:id
   def destroy
-    binding.pry
     @friend = current_user.friends.find_by(id: params[:id])
 
     if @friend

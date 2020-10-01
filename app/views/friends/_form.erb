@@ -9,18 +9,18 @@
     <div class="user-form">
       <h4><%= link_to "« BACK", user_path(current_user) %></h4>
 
-      <%= form_for :friend, method: :patch, url: user_friend_path(current_user, @friend) do |f| %>
-        <%= f.label "", "Friend's Name" %><br>
-        <%= f.text_field :name, required: true %><br><br>
+        <%= form_for [current_user, @friend] do |f| %>
+          <%= f.label "", "Friend's Name" %><br>
+          <%= f.text_field :name, required: true %><br><br>
 
-        <%= f.label "Email" %><br>
-        <%= f.email_field :email, required: true %><br><br>
+          <%= f.label "Email" %><br>
+          <%= f.email_field :email, required: true %><br><br>
 
-        <%= f.label "Phone"%><br>
-        <%= f.telephone_field :phone, required: true %><br><br>
+          <%= f.label "Phone"%><br>
+          <%= f.telephone_field :phone, required: true %><br><br>
 
-        <%= f.submit "#{submit_button_display(@friend)}" %><br><br>
-      <% end %>
+          <%= f.submit "#{submit_button_display(@friend)}" %><br><br>
+        <% end %>
 
       <%= display_delete?(@friend) %>
 

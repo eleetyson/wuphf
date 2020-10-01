@@ -14,4 +14,5 @@ module FriendsHelper
       "Add Friend"
     end
   end
+
 end
