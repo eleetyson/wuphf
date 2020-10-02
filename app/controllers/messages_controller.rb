@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
 
       if @friend.save && @message.save # send the WUPHF if given valid input
         @message.send_wuphf
-        flash[:message] = "WUPHF sent :)"
+        flash[:message] = "WUPHF sent ⚡"
       else
         flash[:message] = @friend.errors.full_messages.first || @message.errors.full_messages.first
       end
