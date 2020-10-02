@@ -1,4 +1,3 @@
-### WUPHF
 [![click to watch full WUPHF demo](doc/demo.gif)](https://www.loom.com/share/759910bec8554d188d19a0c7bafe9862)
 
 Theranos. Nikola. WUPHF. Recent history is littered with the unfulfilled visions of charismatic, though equally dishonest, entrepreneurs.
