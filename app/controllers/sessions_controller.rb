@@ -6,8 +6,8 @@ class SessionsController < ApplicationController
   end
 
 # POST /login
-# log the user in if given valid credentials
-# redirect to the login page with flash message if not
+# logs the user in if given valid credentials
+# redirects to the login page with flash message if not
   def create
     user = User.find_by(email: params[:email])
     user = user.try(:authenticate, params[:password])
@@ -23,9 +23,8 @@ class SessionsController < ApplicationController
   end
 
 # GET /auth/google_oauth2/callback
-# log the user in if they authed in with Google before
-# sign them up if not
-# redirect to dashboard
+# logs the user in if they've authed in with Google before, signs them up if not
+# redirects to the user's dashboard afterwards
   def omniauth
     @user = User.find_or_create_by(uid: auth['uid']) do |u|
       u.name = auth['info']['name']

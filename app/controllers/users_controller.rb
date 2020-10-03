@@ -13,8 +13,8 @@ class UsersController < ApplicationController
   end
 
 # POST /users
-# create an account for the user and log them in if given valid info
-# redirect to sign up page with flash message if not
+# creates an account for the user and logs them in if given valid info
+# redirects to sign up page with flash message if not
   def create
     @user = User.new(user_params)
 

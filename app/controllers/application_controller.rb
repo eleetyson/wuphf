@@ -8,17 +8,17 @@ class ApplicationController < ActionController::Base
     User.find_by(id: session[:user_id])
   end
 
-# returns true or false depending whether the session hash has a user_id key / value
+# returns true or false depending on whether the session hash has a user_id key / value
   def logged_in?
     !!session[:user_id]
   end
 
-# redirect to root if user isn't "logged in"
+# redirects to root if user isn't "logged in"
   def require_login
     redirect_to root_path unless logged_in?
   end
 
-# redirect to dashboard if user is "logged in"
+# redirects to dashboard if user is "logged in"
   def require_logout
     redirect_to user_path(current_user) if logged_in?
   end

@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-# method responsible for actually sending the email
+# sends the email for each WUPHF
   def wuphf_email(message)
     @message = message
     mail(to: @message.friend.email.strip, subject: "WUPHF from #{@message.user.name}")

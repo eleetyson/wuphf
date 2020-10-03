@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
 
 # POST /messages
 # sends a message and associates it depending on whether...
-# a) a new user is sending their first message to new friend
+# a) a new user is sending their first message
 # b) a user selected an existing friend to WUPHF at
   def create
     if params[:email] # message creation for user sending first WUPHF
@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
         flash[:message] = @friend.errors.full_messages.first || @message.errors.full_messages.first
       end
 
-    else # message creation with existing recipient selection
+    else # message creation for existing recipient selection
       @message = Message.new(content: params[:message][:content], user_id: current_user.id)
       @friend = current_user.friends.find_by(id: params[:message][:friend_id])
 
