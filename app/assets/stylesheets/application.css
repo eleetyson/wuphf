@@ -2,12 +2,17 @@
  *= require_tree .
  *= require_self
  */
+
  *,
  ::before,
  ::after {
    box-sizing: border-box;
  }
 
+/* bright orange: color: #f37022 */
+/* dull orange: color: #ef9565 */
+/* bright purple: color: #564e96 */
+/* dull purple: color: #a5a4cb */
 /* 1rem == 10px */
 /* .1rem == 1px */
  html {
@@ -46,6 +51,7 @@
    text-decoration: none;
  }
 
+/* styling nav bar links */
  .grid-signin nav a,
  .dashboard nav a,
  .dash-extended nav a,
@@ -74,6 +80,7 @@
    align-items: flex-start;
  }
 
+/* styling form containers */
  .grid-signin .login-form,
  .dashboard .msg-form,
  .dash-extended .user-form {
@@ -81,6 +88,7 @@
    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
  }
 
+/* styling form input fields */
  .grid-signin .login-form input[type=text],
  input[type=password],
  input[type=email] {
@@ -95,10 +103,12 @@
    text-indent: 1rem;
  }
 
+/* styling form input labels */
  .grid-signin .login-form label {
    font-size: 1.4rem;
  }
 
+/* styling form buttons */
  .grid-signin .login-form input[type=submit] {
    width: 20rem;
    height: 3rem;
@@ -140,6 +150,7 @@
    word-wrap: break-word;
  }
 
+/* styling quotes */
  .grid-signin .filler {
    grid-area: filler;
    align-items: center;
@@ -171,6 +182,7 @@
     "f f f f f f";
  }
 
+/* styling nav bar links */
  .dashboard nav {
    grid-area: n;
    display: flex;
@@ -188,6 +200,7 @@
    padding: 3.75rem 4rem 0rem;
  }
 
+/* styling form container to send WUPHF */
  .dashboard .msg-container {
    grid-area: compose;
    padding: 2rem 1rem 1rem 3rem;
@@ -200,10 +213,12 @@
    border-radius: .5rem;
  }
 
+/* styling form label */
  .dashboard .msg-form label {
    color: #ef9565;
  }
 
+/* styling form fields and dropdowns */
  .dashboard .msg-form select,
  .dashboard .msg-form textarea,
  .dashboard .msg-form input[type=tel],
@@ -245,6 +260,7 @@
    text-indent: 0;
  }
 
+/* styling form button */
  .dashboard .msg-form input[type=submit] {
    cursor: pointer;
    transition: all .2s ease-in-out;
@@ -263,6 +279,7 @@
    color: #000;
  }
 
+/* styling form container */
  .dashboard .friend-container {
    grid-area: recipients;
    padding: 2rem 1rem 1rem;
@@ -272,6 +289,7 @@
    align-items: center;
  }
 
+/* styling empty card with link for user to add a friend */
  .dashboard .empty {
    height: 15rem;
    width: 18rem;
@@ -298,6 +316,7 @@
    transform: scale(1.05);
  }
 
+/* styling cards for user's friends */
  .dashboard .card {
    height: 15rem;
    width: 20rem;
@@ -354,6 +373,7 @@
     "f f f f f f";
  }
 
+/* styling nav bar links */
  .dash-extended nav {
    grid-area: t;
    display: flex;
@@ -379,14 +399,17 @@
    align-items: center;
  }
 
+/* styling form */
  .dash-extended .user-form {
    border-radius: .5rem;
  }
 
+ /* styling form label */
  .dash-extended .user-form label {
    color: #ef9565;
  }
 
+/* styling form button */
  .dash-extended .user-form input[type=submit] {
    width: 25rem;
    cursor: pointer;
@@ -400,6 +423,7 @@
    transition: all .2s ease-in-out;
  }
 
+/* styling form fields */
  .dash-extended .user-form input[type=tel],
  .dash-extended .user-form input[type=text],
  .dash-extended .user-form input[type=email] {
@@ -444,61 +468,4 @@
    grid-area: placeholder;
    padding: 3rem 2rem;
  }
-
  /* dashboard extended pages styling END */
-
-
- /*
- .dashboard .msg-container {
-   grid-area: compose;
-   padding: 2rem 1rem 1rem 3rem;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
- }
-
- .dashboard .msg-form {
-   border-radius: .5rem;
- }
-
- .dashboard .msg-form label {
-   color: #ef9565;
- }
-
- .dashboard .msg-form select,
- .dashboard .msg-form textarea,
- .dashboard .msg-form input[type=tel],
- .dashboard .msg-form input[type=text],
- .dashboard .msg-form input[type=email],
- .dashboard .msg-form input[type=submit] {
-   width: 25rem;
-   padding: .2rem 0;
-   margin: .2rem 0;
-   border-color: #D3D3D3;
-   border-radius: 1rem;
-   border: none;
-   background-color: #fff;
-   height: 3rem;
-   font-size: 1.3rem;
-   text-indent: 1rem;
- }
-
- .dashboard .msg-form select:focus,
- .dashboard .msg-form textarea:focus,
- .dashboard .msg-form input[type=tel]:focus,
- .dashboard .msg-form input[type=text]:focus,
- .dashboard .msg-form input[type=email]:focus,
- .dashboard .msg-form input[type=submit]:focus {
-   outline: none;
-   box-shadow: none;
- }
-
-
-  */
-
-
-
- /* bright orange: color: #f37022 */
- /* dull orange: color: #ef9565 */
- /* bright purple: color: #564e96 */
- /* dull purple: color: #a5a4cb */
