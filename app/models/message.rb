@@ -17,7 +17,7 @@ class Message < ApplicationRecord
 
     from = '+14782490442'
     to = "+1" + self.friend.phone.strip
-    body = "WUPHF from #{self.friend.name}:\n\n" + self.content
+    body = "WUPHF from #{self.user.name}:\n\n" + self.content
     client.messages.create(from: from, to: to, body: body)
   end
 
