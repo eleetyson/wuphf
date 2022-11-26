@@ -27,7 +27,7 @@ Rails.application.configure do
 
   config.cache_classes = true
   config.serve_static_assets = true
-  config.assets.compile = true
+  config.assets.compile = false
   config.assets.digest = true
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
